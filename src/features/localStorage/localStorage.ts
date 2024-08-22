@@ -39,14 +39,12 @@ export function useLocalStorage<T>(key: string, initialValue?: T) {
       }
     };
 
-    window.addEventListener("storage", handleStorageChange);
     window.addEventListener(
       "local-storage",
       handleStorageChange as EventListener
     );
 
     return () => {
-      window.removeEventListener("storage", handleStorageChange);
       window.removeEventListener(
         "local-storage",
         handleStorageChange as EventListener

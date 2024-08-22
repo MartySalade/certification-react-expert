@@ -28,7 +28,6 @@ export function AutoFilterResults({
               className="hover:bg-slate-200 cursor-pointer px-2 py-0.5"
               key={result.id}
               onClick={() => valueChange(result)}
-              onKeyDown={() => valueChange(result)}
             >
               {highlightFilterAsBold(displayValue, value)}
             </li>
